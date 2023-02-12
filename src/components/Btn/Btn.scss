@@ -1,0 +1,41 @@
+button {
+  background-color: transparent;
+  font-size: 18px;
+  padding: 10px 20px;
+  border: 2px solid;
+  border-radius: 20px;
+
+  transition: all 0.2s ease-in-out;
+
+  &.orange {
+    color: #ff8c00;
+
+    &:hover {
+      color: #016161;
+      background-color: #ff8c00;
+      transform: scale(1.1);
+    }
+
+    &:active {
+      color: #016161;
+      background-color: #ff8c00;
+      transform: scale(0.9);
+    }
+  }
+
+  &.teal {
+    color: #016161;
+
+    &:hover {
+      color: #ff8c00;
+      background-color: #016161;
+      transform: scale(1.1);
+    }
+
+    &:active {
+      color: #ff8c00;
+      background-color: #016161;
+      transform: scale(0.9);
+    }
+  }
+}

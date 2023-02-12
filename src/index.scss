@@ -1,0 +1,69 @@
+@import "rem";
+
+#root {
+  /* font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif; */
+  // font-family: "e-UkraineHead";
+
+  min-height: 100vh;
+
+  .App {
+    font-family: "e-Ukraine";
+    font-size: 18px;
+    line-height: 1.2;
+    font-weight: 400;
+
+    max-height: inherit;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+
+    transition: background-color 0.3s ease-in-out;
+
+    main {
+      flex: 1 1 100%;
+    }
+
+    &.orange {
+      color: #ff8c00;
+      background-color: #016161;
+
+      a {
+        color: #ff8c00;
+        text-decoration: underline;
+      }
+    }
+
+    &.teal {
+      color: #016161;
+      background-color: #ff8c00;
+
+      a {
+        color: #016161;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+  transition: all 0.3s ease-in-out;
+}
+
+p {
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 15px;
+}

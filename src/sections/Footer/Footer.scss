@@ -1,0 +1,175 @@
+footer {
+  .inner {
+    padding: 30px 0;
+    display: grid;
+    grid-template-areas:
+      "box1 box2 box3"
+      "box4 box4 box4";
+    grid-gap: 40px;
+
+    @media (max-width: 930px) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+
+  .powered {
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+
+    transition: all 0.3s ease-in-out;
+  }
+
+  .box {
+    // max-width: 300px;
+
+    &:nth-child(1) {
+      grid-area: box1;
+    }
+    &:nth-child(2) {
+      grid-area: box2;
+    }
+    &:nth-child(3) {
+      grid-area: box3;
+    }
+    &:nth-child(4) {
+      grid-area: box4;
+    }
+  }
+
+  .footer-title {
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+
+  .socialNetwork-list {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 23px;
+    margin-bottom: 20px;
+
+    li {
+      transition: all 0.3s ease-in-out;
+
+      @media (min-width: 768px) {
+        &:hover {
+          transform: scale(1.2);
+        }
+      }
+
+      &:active {
+        transform: scale(0.9);
+      }
+    }
+  }
+
+  form {
+    max-width: 500px;
+    display: grid;
+    grid-template-areas:
+      "i1 i2"
+      "ta ta"
+      "btn btn";
+    grid-template-columns: 48% 48%;
+    grid-gap: 20px;
+
+    @media (max-width: 768px) {
+      display: flex;
+      flex-direction: column;
+    }
+
+    input,
+    textarea {
+      max-width: 300px;
+      width: 100%;
+
+      background-color: transparent;
+      font-size: 18px;
+      padding: 10px 20px;
+      border: 2px solid;
+      border-radius: 20px;
+
+      transition: all 0.3s ease-in-out;
+
+      &::placeholder {
+        transition: all 0.3s ease-in-out;
+      }
+    }
+
+    input {
+      &:nth-child(1) {
+        grid-area: i1;
+      }
+      &:nth-child(2) {
+        grid-area: i2;
+      }
+    }
+
+    textarea {
+      grid-area: ta;
+      resize: horizontal;
+      height: 150px;
+      max-width: 100%;
+    }
+
+    &.orange {
+      input,
+      textarea {
+        color: #ff8c00;
+        &::placeholder {
+          color: #ff8c00;
+        }
+        &:focus {
+          color: #016161;
+          background-color: #ff8c00;
+
+          &::placeholder {
+            color: #016161;
+          }
+        }
+      }
+
+      button {
+        grid-area: btn;
+
+        &:focus {
+          color: #016161;
+          background-color: #ff8c00;
+          transform: scale(1.1);
+        }
+      }
+    }
+
+    &.teal {
+      input,
+      textarea {
+        color: #016161;
+        &::placeholder {
+          color: #016161;
+        }
+        &:focus {
+          color: #ff8c00;
+          background-color: #016161;
+
+          &::placeholder {
+            color: #ff8c00;
+          }
+        }
+      }
+
+      button {
+        grid-area: btn;
+
+        &:focus {
+          color: #ff8c00;
+          background-color: #016161;
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+}
